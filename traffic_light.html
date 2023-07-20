@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Мой сайт</title>
+		<style>
+			#block{
+				width: 300px; /* задаём ширину блока с id block */
+				background: black; /* задаём цвет фона блока с id block */
+				margin: auto; /* задаём внешний отступ блока с id block */
+				border: 5px groove gray; /* стилизуем границы вокруг блока с id block */
+			}
+			#redBlock, #yellowBlock, #limeBlock{
+				width: 150px; /* задаём ширину блоков с id redBlock, yellowBlock, limeBlock */
+				height: 150px; /* задаём высоту блоков с id redBlock, yellowBlock, limeBlock */
+				margin: auto; /* задаём внешний отступ блоков с id redBlock, yellowBlock, limeBlock */
+				border-radius: 75px; /* задаём закруглённые углы блоков с id redBlock, yellowBlock, limeBlock */
+				margin-bottom: 15px; /* задаём внешний отступ внизу блоков с id redBlock, yellowBlock, limeBlock */
+				box-shadow: inset 0 0 20px black;
+				border: 3px solid silver;
+				background:gray;
+				margin-top: 15px;
+			}
+			#redBlock:hover{
+				animation: stop 20s infinite;
+			}
+			#yellowBlock:hover{
+				animation: waitp 20s infinite;
+			}
+			#limeBlock:hover{
+				animation: go 20s infinite;
+			}
+			@keyframes stop{
+				0%{background: red;}
+				19%{background: red;}
+				20%{background: gray;}
+				59%{background: gray;}
+				60%{background: red;}
+				100%{background: red;}
+			}
+			@keyframes stop{
+				19%{background: gray;}
+				20%{background: yellow;}
+				29%{background: yellow;}
+				30%{background: gray;}
+				49%{background: gray;}
+				50%{background: yellow;}
+				59%{background: yellow;}
+				60%{background: gray;}
+			}
+			@keyframes go{
+				29%{background: gray;}
+				30%{background: lime;}
+				49%{background: lime;}
+				50%{background: gray;}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="block">
+			<div id="redBlock"></div>
+			<div id="yellowBlock"></div>
+			<div id="limeBlock"></div>
+		</div>
+	</body>
+</html>
